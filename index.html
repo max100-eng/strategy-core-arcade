@@ -4,10 +4,10 @@
 *{box-sizing:border-box}
 body{background:radial-gradient(circle at 20% 0%,#0c1730 0%,var(--bg) 45%,var(--bg2) 100%);color:#fff;font-family:'JetBrains Mono',Inter,system-ui;margin:0;padding:10px;min-height:100vh}
 h1,h2,.font-display{font-family:'Orbitron',sans-serif}
-
+ 
 /* ---- SCANLINES / NOISE OVERLAY ---- */
 .scanlines{position:fixed;inset:0;pointer-events:none;z-index:1;background:repeating-linear-gradient(to bottom,rgba(0,212,255,.035) 0px,rgba(0,212,255,.035) 1px,transparent 1px,transparent 3px);mix-blend-mode:overlay}
-
+ 
 /* ---- HUD CORNER BRACKETS ---- */
 .hud{position:relative}
 .hud::before,.hud::after,.hud .br,.hud .bl{content:"";position:absolute;width:14px;height:14px;border:2px solid var(--cyan);opacity:.8}
@@ -15,17 +15,20 @@ h1,h2,.font-display{font-family:'Orbitron',sans-serif}
 .hud::after{top:-1px;right:-1px;border-left:none;border-bottom:none}
 .hud .bl{bottom:-1px;left:-1px;border-right:none;border-top:none}
 .hud .br{bottom:-1px;right:-1px;border-left:none;border-top:none}
-
+ 
 /* ---- COVER PAGE ---- */
 #cover{min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:40px 16px 60px;position:relative;z-index:2}
+.legal-footer{margin-top:36px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;font-size:11px;color:#6f84b8}
+.legal-footer a{color:#6f84b8;text-decoration:none}
+.legal-footer a:hover{color:var(--cyan);text-decoration:underline}
 .cover-logo{font-family:'Orbitron',sans-serif;font-weight:900;font-size:clamp(28px,6vw,46px);letter-spacing:2px;background:linear-gradient(90deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent;text-align:center;text-shadow:0 0 40px rgba(0,212,255,.25)}
 .cover-tag{font-size:13px;color:#8ea3d6;letter-spacing:3px;text-transform:uppercase;margin-top:8px;text-align:center}
 .cover-sub{max-width:520px;text-align:center;color:#b6c3e8;font-size:14px;line-height:1.6;margin:18px 0 26px}
-
+ 
 .feat-row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:820px;margin-bottom:34px}
 .feat-badge{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:12px;color:#cfe0ff;display:flex;align-items:center;gap:8px;backdrop-filter:blur(6px)}
 .feat-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan)}
-
+ 
 .games-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;width:100%;max-width:960px}
 .gcard{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;cursor:pointer;text-align:left;backdrop-filter:blur(8px);transition:transform .15s,border-color .15s,box-shadow .15s;position:relative;overflow:hidden}
 .gcard:hover{transform:translateY(-4px);border-color:var(--cyan);box-shadow:0 10px 30px rgba(0,212,255,.15)}
@@ -34,11 +37,11 @@ h1,h2,.font-display{font-family:'Orbitron',sans-serif}
 .gcard p{font-size:12px;color:#9fb0d8;margin:0 0 12px;line-height:1.5;min-height:36px}
 .gcard .tag{display:inline-block;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--cyan);border:1px solid rgba(0,212,255,.4);border-radius:6px;padding:3px 8px}
 .gcard .glow{position:absolute;top:-40px;right:-40px;width:100px;height:100px;background:var(--cyan);opacity:.08;border-radius:50%;filter:blur(20px)}
-
+ 
 .back-btn{background:var(--panel);border:1px solid var(--line);color:#cfe0ff;border-radius:8px;padding:6px 12px;font-size:12px;cursor:pointer;font-family:'JetBrains Mono',monospace}
 .back-btn:hover{border-color:var(--cyan)}
 #app-view{position:relative;z-index:2}
-
+ 
 #menu{display:flex;flex-wrap:wrap;gap:6px;position:sticky;top:0;background:var(--bg);z-index:20;padding:6px 0;align-items:center}
 #menu button{background:#1a2644;border:1px solid #2a3a6a;color:#cbd5ff;border-radius:10px;padding:8px 12px;cursor:pointer;font-family:'JetBrains Mono',monospace}
 #menu button.active{background:#00d4ff;color:#000}
@@ -93,7 +96,7 @@ canvas{background:#040912;border-radius:12px;display:block;margin:10px 0}
 #g2048-overlay{position:absolute;inset:8px;display:none;align-items:center;justify-content:center;flex-direction:column;background:rgba(8,9,26,.85);border-radius:10px;text-align:center;gap:6px;z-index:5}
 #g2048-overlay .t{font-family:'Orbitron',sans-serif;font-size:20px;color:#cfe9ff}
 #g2048-overlay .s{font-size:12px;color:#9fb0d8}
-
+ 
 #tet{background:linear-gradient(180deg,#0d1730,#080f22);border:1px solid #1c3a63;box-shadow:0 0 40px rgba(0,212,255,.08)}
 #tet-wrap{display:flex;gap:12px;align-items:flex-start}
 #tet-side{display:flex;flex-direction:column;gap:8px}
@@ -101,7 +104,7 @@ canvas{background:#040912;border-radius:12px;display:block;margin:10px 0}
 .tet-label{font-size:10px;letter-spacing:1px;color:#6f8fc9;font-family:'Orbitron',sans-serif}
 .tet-val{font-family:'Orbitron',sans-serif;font-size:18px;color:#cfe9ff;text-shadow:0 0 8px rgba(0,212,255,.3)}
 #tc-next{background:#040912;border-radius:6px;margin-top:4px}
-
+ 
 #ms{background:linear-gradient(180deg,#1a1428,#0c0a1a);border:1px solid #3a2a63;box-shadow:0 0 40px rgba(255,150,80,.06)}
 #ms-hud{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-family:'Orbitron',sans-serif;font-size:13px;color:#ffd9a8}
 #ms-hud span{display:flex;align-items:center;gap:6px}
@@ -121,7 +124,7 @@ canvas{background:#040912;border-radius:12px;display:block;margin:10px 0}
 .ms-diff button{background:#241c3c;border:1px solid #3a2a63;color:#e6d9ff;border-radius:8px;padding:7px 14px;cursor:pointer;font-family:'JetBrains Mono',monospace}
 .ms-diff button.active{background:#7c5cff;color:#fff;border-color:#7c5cff}
 #ms-board{display:grid;gap:3px}.ms-cell{width:36px;height:36px;background:#2a3a5a;border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:800;cursor:pointer}.ms-cell.rv{background:#0f1830}
-
+ 
 #go{background:linear-gradient(180deg,#1c1408,#0f0a05);border:1px solid #4a3010;box-shadow:0 0 40px rgba(201,151,79,.08)}
 #go-hud{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-family:'Orbitron',sans-serif;font-size:13px;color:#ffd9a8}
 #rv{background:linear-gradient(180deg,#0a1f14,#06120c);border:1px solid #1c4a2f;box-shadow:0 0 40px rgba(0,255,140,.08)}
@@ -129,12 +132,12 @@ canvas{background:#040912;border-radius:12px;display:block;margin:10px 0}
 .ms-cell.cursor{outline:2px solid var(--cyan);outline-offset:-2px;z-index:3}
 </style></head><body>
 <div class="scanlines"></div>
-
+ 
 <div id="cover">
   <div class="cover-logo">STRATEGY CORE</div>
   <div class="cover-tag">Arcade Suite</div>
   <p class="cover-sub">Siete juegos clásicos reconstruidos desde cero, con IA propia en cada uno. Todo corre 100% en el navegador — sin backend, sin cuentas, sin conexión.</p>
-
+ 
   <div class="feat-row">
     <div class="feat-badge"><span class="dot"></span>7 juegos completos</div>
     <div class="feat-badge"><span class="dot"></span>IA minimax + poda alfa-beta</div>
@@ -142,10 +145,18 @@ canvas{background:#040912;border-radius:12px;display:block;margin:10px 0}
     <div class="feat-badge"><span class="dot"></span>Sin dependencias externas</div>
     <div class="feat-badge"><span class="dot"></span>Diseño HUD cyberpunk</div>
   </div>
-
+ 
   <div class="games-grid" id="games-grid"></div>
+ 
+  <footer class="legal-footer">
+    <a href="privacy-policy.html" target="_blank" rel="noopener">Política de Privacidad</a>
+    <span>·</span>
+    <a href="cookie-policy.html" target="_blank" rel="noopener">Política de Cookies</a>
+    <span>·</span>
+    <a href="terms.html" target="_blank" rel="noopener">Términos</a>
+  </footer>
 </div>
-
+ 
 <div id="app-view" style="display:none">
 <div id="menu">
 <button class="back-btn" onclick="goToCover()">← Portada</button>
@@ -157,7 +168,7 @@ canvas{background:#040912;border-radius:12px;display:block;margin:10px 0}
 <button onclick="show('tet')" id="b-tet">Tetris</button>
 <button onclick="show('ms')" id="b-ms">Mines</button>
 </div>
-
+ 
 <div id="chess" class="card hud">
 <div id="chess-top">
 <select id="diff"><option value="1">Fácil - Depth 1</option><option value="2" selected>Medio - Depth 2</option><option value="3">Difícil - Depth 3</option><option value="4">PRO - Depth 4 + PST</option></select>
@@ -167,7 +178,7 @@ canvas{background:#040912;border-radius:12px;display:block;margin:10px 0}
 <div id="status" style="margin:10px 0;font-weight:700">White to move</div>
 <div id="captured" style="font-size:13px;opacity:.8"></div>
 </div>
-
+ 
 <div id="snake" class="card hud" style="display:none">
   <div id="snake-hud"><span>SCORE: <span id="snake-score">0</span></span><span class="hi">MEJOR: <span id="snake-hi">0</span></span></div>
   <canvas id="sc" width="360" height="360"></canvas>
@@ -276,7 +287,7 @@ canvas{background:#040912;border-radius:12px;display:block;margin:10px 0}
   <p style="font-size:11px;color:#9d8fc9;margin:8px 0 0">Clic: revelar · Clic derecho / mantener pulsado: marcar bandera 🚩 · o usa las flechas de arriba</p>
 </div>
 </div>
-
+ 
 <script>
 // --- PORTADA ---
 const GAMES=[
@@ -315,7 +326,7 @@ renderCover();
 const ICO_PLAY='<svg class="icon-svg" viewBox="0 0 24 24"><path d="M7 5l13 7-13 7z"/></svg>';
 const ICO_PAUSE='<svg class="icon-svg" viewBox="0 0 24 24"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg>';
 function show(id){['chess','snake','go','g2048','rv','tet','ms'].forEach(k=>{document.getElementById(k).style.display=k===id?'block':'none'; document.getElementById('b-'+k).classList.toggle('active',k===id);}); if(id==='rv') drawRV(); if(id==='go') drawGo();}
-
+ 
 // SNAKE
 const S_GRID=18, S_CELL=20, S_BASE_SPEED=150, S_MIN_SPEED=70;
 let sB,sD,sN,sF,sL,sScore=0,sHi=0,sState='idle',sPulse=0,sPulseDir=1;
@@ -439,7 +450,7 @@ document.addEventListener('keydown',(e)=>{
     else snakeInput(dy>0?'DOWN':'UP');
   },{passive:true});
 })();
-
+ 
 // GO 9x9
 let goB,goTurn,goCapB,goCapW,goPass=0,goOver=false,goCurR=4,goCurC=4;
 function initGo(){goB=Array.from({length:9},()=>Array(9).fill(null)); goTurn='B'; goCapB=0; goCapW=0; goPass=0; goOver=false; goCurR=4; goCurC=4; drawGo();}
@@ -464,7 +475,7 @@ document.addEventListener('keydown',(e)=>{
   if(m[e.key]){ e.preventDefault(); goCursorMove(m[e.key][0],m[e.key][1]); }
   else if(e.key==='Enter'||e.key===' '){ e.preventDefault(); goPlaceCursor(); }
 });
-
+ 
 // 2048
 let b2048,score2048=0,hi2048=0,over2048=false,won2048=false;
 function init2048(){
@@ -521,7 +532,7 @@ document.addEventListener('keydown',(e)=>{const m={ArrowUp:'UP',ArrowDown:'DOWN'
     if(Math.abs(dx)>Math.abs(dy)) move2048(dx>0?'RIGHT':'LEFT'); else move2048(dy>0?'DOWN':'UP');
   },{passive:true});
 })();
-
+ 
 // REVERSI
 let rvB,rvTurn,rvOver,rvCurR=3,rvCurC=3;
 const RV_DIRS=[[-1,-1],[-1,0],[-1,1],[0,-1],[0,1],[1,-1],[1,0],[1,1]];
@@ -547,7 +558,7 @@ document.addEventListener('keydown',(e)=>{
   if(m[e.key]){ e.preventDefault(); rvCursorMove(m[e.key][0],m[e.key][1]); }
   else if(e.key==='Enter'||e.key===' '){ e.preventDefault(); rvPlaceCursor(); }
 });
-
+ 
 // TETRIS
 const TET_SHAPES={I:{color:'#00d4ff',rot:[[[0,1],[1,1],[2,1],[3,1]],[[1,0],[1,1],[1,2],[1,3]]]},O:{color:'#ffc857',rot:[[[0,0],[0,1],[1,0],[1,1]]]},T:{color:'#aa66ff',rot:[[[0,1],[1,0],[1,1],[1,2]],[[0,1],[1,1],[1,2],[2,1]],[[1,0],[1,1],[1,2],[2,1]],[[0,1],[1,0],[1,1],[2,1]]]},S:{color:'#00ff88',rot:[[[0,1],[0,2],[1,0],[1,1]],[[0,1],[1,1],[1,2],[2,2]]]},Z:{color:'#ff3366',rot:[[[0,0],[0,1],[1,1],[1,2]],[[0,2],[1,1],[1,2],[2,1]]]},J:{color:'#4488ff',rot:[[[0,0],[1,0],[1,1],[1,2]],[[0,1],[0,2],[1,1],[2,1]],[[1,0],[1,1],[1,2],[2,2]],[[0,1],[1,1],[2,0],[2,1]]]},L:{color:'#ff8800',rot:[[[0,2],[1,0],[1,1],[1,2]],[[0,1],[1,1],[2,1],[2,2]],[[1,0],[1,1],[1,2],[2,0]],[[0,0],[0,1],[1,1],[2,1]]]}};
 let tB,tP,tPos,tRot,tBag,tNext,tScore=0,tLines=0,tLevel=1,tLoop,tOver=false,tPaused=false;
@@ -629,7 +640,7 @@ document.addEventListener('keydown',(e)=>{
   if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown',' '].includes(e.key)) e.preventDefault();
   if(e.key==='ArrowLeft') tMove(-1); else if(e.key==='ArrowRight') tMove(1); else if(e.key==='ArrowDown') tDrop(); else if(e.key==='ArrowUp') tRotateP(); else if(e.key===' ') tHard(); else if(e.key==='p'||e.key==='P') toggleTet();
 });
-
+ 
 // MINESWEEPER
 let msR,msC,msMines,msBo,msRe,msFlag,msFirstClick,msTimer,msSecs=0,msOver=false,msWon=false,msRevealedCount=0,msCurR=0,msCurC=0;
 function initMS(r=9,c=9,m=10){
@@ -866,7 +877,7 @@ function findBest(b,cast,ep,depth,color){
   }
   return bestMove;
 }
-
+ 
 // UI CHESS PRO
 function initChess(){
   cEl=document.getElementById('chess-board');
@@ -937,3 +948,4 @@ function checkEnd(){updateStatus();}
 initChess(); initSnake(); initGo(); init2048(); initRV(); initTet(); initMS(9,9,10);
 </script>
 </body></html>
+ 
