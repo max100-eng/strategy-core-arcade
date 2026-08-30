@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.strategycore.app",
+      "sha256_cert_fingerprints": [
+        "3F:61:06:63:E4:32:B6:C6:8F:66:5E:28:BB:01:32:4D:B3:07:42:8E:89:77:05:37:52:4D:F9:CD:71:3D"
+      ]
+    }
+  }
+]
