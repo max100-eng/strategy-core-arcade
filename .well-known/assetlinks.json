@@ -1,14 +1,12 @@
 ﻿[
   {
-    "relation": [
-      "delegate_permission/common.handle_all_urls",
-      "delegate_permission/common.get_login_creds"
-    ],
+    "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
       "package_name": "com.strategycore.app",
       "sha256_cert_fingerprints": [
-        "0A:7C:37:92:61:FC:B7:D4:33:9B:91:18:58:9A:F4:F3:CE:A9:94:98:42:9E:4A:58:8A:48:7D:C1:B4:B0:F1:0E"
+        "0A:7C:37:92:61:FC:B7:D4:33:9B:91:18:58:9A:F4:F3:CE:A9:94:98:42:9E:4A:58:8A:48:7D:C1:B4:B0:F1:0E",
+        "3F:61:06:63:E4:32:B6:C6:8F:66:5E:28:BB:01:32:4D:B3:07:42:8E:89:77:05:37:52:4D:F9:CD:71:37:41:B7"
       ]
     }
   }
