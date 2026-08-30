@@ -1,54 +1,25 @@
-
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Strategy Core: 7 Classic Games</title>
-    <script type="module" crossorigin src="/assets/index-BAoyeUmH.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DBv6Qer6.css">
-  </head>
-  <body>
-    <header class="header">
-      <div class="logo">Strategy Core</div>
-      <nav>
-        <a href="#features">Características</a>
-        <a href="#download">Descargar</a>
-      </nav>
-    </header>
-    <section class="hero">
-      <div class="hero-content">
-        <h1>7 Juegos Clásicos en una sola App</h1>
-        <p>Revive la estrategia clásica con una colección única optimizada para móviles.</p>
-        <a class="cta-button" id="download" href="https://play.google.com/store/apps/details?id=com.strategycore.app" target="_blank">
-          Descargar en Google Play
-        </a>
-      </div>
-      <img src="/assets/hero.png" alt="Strategy Core Hero" class="hero-img" />
-    </section>
-    <section id="features" class="features">
-      <h2>Características</h2>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <h3>🎮 7 Juegos Clásicos</h3>
-          <p>Una colección cuidadosamente seleccionada para los amantes de la estrategia.</p>
-        </div>
-        <div class="feature-card">
-          <h3>⚡ Rendimiento Optimizado</h3>
-          <p>Experiencia fluida incluso en dispositivos de gama media.</p>
-        </div>
-        <div class="feature-card">
-          <h3>🌙 Modo Oscuro</h3>
-          <p>Diseño moderno y agradable para sesiones largas.</p>
-        </div>
-        <div class="feature-card">
-          <h3>🔗 Deep Links</h3>
-          <p>Integración completa con App Links para abrir contenido directamente.</p>
-        </div>
-      </div>
-    </section>
-    <footer class="footer">
-      <p>© 2026 Strategy Core</p>
-    </footer>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strategy Core Arcade - 7 Juegos</title>
+  <script type="module" crossorigin src="/assets/index-DhXmjOs0.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CJVi3-v0.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Strategy Core - Arcade</h1>
+    <div id="games">
+      <button data-game="chess">Ajedrez</button>
+      <button data-game="go">Go</button>
+      <button data-game="tetris">Tetris</button>
+      <button data-game="minesweeper">Buscaminas</button>
+      <button data-game="snake">Snake</button>
+      <button data-game="2048">2048</button>
+      <button data-game="reversi">Reversi</button>
+    </div>
+    <pre id="log"></pre>
+  </div>
+</body>
 </html>
